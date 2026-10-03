@@ -1,0 +1,335 @@
+:root {
+    --bg-dark: #0f0a1c;
+    --card-bg: rgba(23, 15, 38, 0.85);
+    --border-color: #3b2260;
+    --primary-purple: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --purple-glow: rgba(139, 92, 246, 0.3);
+    --text-main: #f3f4f6;
+    --text-muted: #a1a1aa;
+    --input-bg: #181028;
+    --error-color: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.login-form {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.login-form h2 {
+    color: var(--text-main);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Estructura del formulario */
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Campos de entrada y select */
+.login-form select,
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-form select option {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+}
+
+.login-form input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Efectos al enfocar los inputs */
+.login-form select:focus,
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px var(--purple-glow);
+}
+
+/* Botón de inicio de sesión */
+.btn-login {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+/* Enlace de registro */
+.btn-register {
+    display: block;
+    text-align: center;
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-register:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+:root {
+    --bg-dark: #0f0a1c;
+    --card-bg: rgba(23, 15, 38, 0.85);
+    --border-color: #3b2260;
+    --primary-purple: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --purple-glow: rgba(139, 92, 246, 0.3);
+    --text-main: #f3f4f6;
+    --text-muted: #a1a1aa;
+    --input-bg: #181028;
+    --error-color: #ef4444;
+}
+
+/* Reset y configuración base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+/* Destello de fondo */
+.background-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--purple-glow) 0%, rgba(15, 10, 28, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 0 1rem;
+}
+
+/* Tarjeta principal */
+.auth-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Ocultar secciones dinámicamente */
+.auth-card[hidden] {
+    display: none !important;
+}
+
+/* Títulos */
+.auth-card h2 {
+    color: var(--text-main);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Agrupador de formularios y botones de rol */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estructura del formulario */
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+/* Labels */
+.auth-card label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: -0.3rem;
+}
+
+/* Inputs y Selects */
+.auth-card input[type="text"],
+.auth-card input[type="password"],
+.auth-card select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card select option {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+}
+
+/* Enfocado de campos */
+.auth-card input:focus,
+.auth-card select:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px var(--purple-glow);
+}
+
+/* Botones principales y de roles */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.auth-card form button {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 0.8rem;
+}
+
+.auth-card form button:hover {
+    background-color: var(--primary-hover);
+}
+
+.auth-card form button:active {
+    transform: scale(0.98);
+}
+
+/* Botones secundarios (Selección de rol) */
+.btn-secondary {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-color);
+    border-color: var(--primary-purple);
+    color: #ffffff;
+}
+
+/* Texto de cambio a login y enlace */
+.auth-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-card p a.btn {
+    display: inline;
+    padding: 0;
+    background: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.auth-card p a.btn:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+.btn-back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
