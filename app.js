@@ -22,17 +22,18 @@ app.use(session({
     saveUninitialized: true
 }));
 
+app.use(express.static('pag'));
 
 const connection = require('./database/db');
 
-// Middleware para verificar si la sesión está activa y tiene el rol permitido
+
 function verificarRol(rolPermitido) {
     return (req, res, next) => {
         if (req.session.loggedin && req.session.rol === rolPermitido) {
-            // Si está logueado y tiene el rol correcto, permite continuar
+            
             return next();
         }
-        // Si no está logueado o el rol no coincide, redirige al login
+        
         res.redirect('/login');
     };
 }
@@ -108,6 +109,10 @@ app.post('/register', async (req, res) => {
 });
 
 /*login*/
+// Ruta GET para mostrar la vista del formulario de login
+app.get('/login', (req, res) => {
+    res.render('login');
+});
 
 app.post('/auth', async (req, res) => {
     const user = req.body.user;
@@ -122,7 +127,6 @@ app.post('/auth', async (req, res) => {
                 return res.send('Error en la consulta');
             }
 
-            // Validar si el usuario existe y si la contraseña coincide
             if (results.length === 0 || !(await bcryptjs.compare(password, results[0].pass))) {
                 res.render('login', {
                     alertTitle: "Error",
@@ -133,12 +137,10 @@ app.post('/auth', async (req, res) => {
                     ruta: 'login'
                 });
             } else {
-                // Guardar datos en la sesión
                 req.session.loggedin = true;
                 req.session.name = results[0].name;
                 req.session.rol = results[0].rol;
 
-                // Redirigir según el rol guardado en la base de datos
                 if (results[0].rol === 'admin') {
                     res.redirect('/admin');
                 } else if (results[0].rol === 'docente') {
@@ -150,6 +152,10 @@ app.post('/auth', async (req, res) => {
         });
     }
 });
+
+/**/
+
+
 app.listen(3000, (req, res) => {
     console.log('Server is running on port 3000 http://localhost:3000/login');
 });

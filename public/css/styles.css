@@ -333,3 +333,7 @@ body {
     font-size: 0.85rem;
     text-decoration: none;
 }
+.back{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra">
+        <div class="nav-barra">
+            <a href="#inicio" class="nav-port">
+                <h2>LabFlow <span>Qr</span></h2>
+            </a>
+            <button id="responsive" aria-label="Abrir menú">&#9776;</button>
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio"><span>Inicio</span></a>
+                <a href="#caracteristicas"><span>Características</span></a>
+                <a href="#Funcionamiento"><span>Funcionamiento</span></a>
+                <a href="#investigacion"><span>Investigación</span></a>
+                <a href="#contacto"><span>Contacto</span></a>
+                <a href="/login" class="acceder">Acceder</a>
+            </nav>
+        </div>
+    </header>
+    <!-- SECCIÓN 1 -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Texto y Llamados a la Acción -->
+            <div class="hero-content">
+                <span class="badge-tag">⚡ Semillero de Investigación 2026</span>
+                <h1>Gestión Inteligente de Aforo en <span>Tiempo Real</span></h1>
+                <p>Consulta la disponibilidad de laboratorios universitarios, ingresa con tu QR dinámico institucional y optimiza el uso de los espacios académicos sin aglomeraciones.</p>
+                
+                <div class="hero-buttons">
+                    <a href="../views/login.ejs" class="btn-primary">Ingresar a la Plataforma</a>
+                    <a href="#caracteristicas" class="btn-secondary">Ver Disponibilidad</a>
+                </div>
+
+                <!-- Métricas rápidas de impacto -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">0%</span>
+                        <span class="stat-label">Cupos Fantasma</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Digital & QR</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">En vivo</span>
+                        <span class="stat-label">Actualización</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta Interactiva Mockup -->
+            <div class="hero-visual">
+                <div class="preview-card">
+                    <div class="card-header">
+                        <div class="lab-title">
+                            <h3>Lab. Computo 1</h3>
+                            <span class="lab-code">Sala 1 • Edificio A</span>
+                        </div>
+                        <span class="status-pill status-disponible">🟢 70% Libre</span>
+                    </div>
+
+                    <div class="capacity-info">
+                        <span>Ocupación Actual</span>
+                        <strong>14 / 20 Personas</strong>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+
+                    <div class="card-footer-action">
+                        <button class="btn-card-action">Registrar Entrada Directa</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="features-section" id="caracteristicas">
+        <div class="features-container">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="section-header">
+                <span class="section-badge">🚀 Innovación para el Campus</span>
+                <h2>Diseñado para optimizar la <span>gestión universitaria</span></h2>
+                <p>Una solución integral que combina tecnología web moderna con lógica inteligente para transformar el acceso y uso de los espacios académicos.</p>
+            </div>
+
+            <!-- Grilla de Tarjetas de Características -->
+            <div class="features-grid">
+
+                <!-- Tarjeta 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🪪</span>
+                    </div>
+                    <h3>QR Dinámico Institucional</h3>
+                    <p>Carnet digital integrado para validación de acceso inmediata. Muestra tu código dinámico desde la web o escanéalo directamente en la puerta del laboratorio.</p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="feature-card highlighted-card">
+                    <div class="card-tag-top">Destacado</div>
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">⏱️</span>
+                    </div>
+                    <h3>Liberación por Timeout</h3>
+                    <p>Algoritmo inteligente de expiración que restablece automáticamente los cupos olvidados, asegurando que el aforo reflejado en la plataforma sea 100% real.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">📊</span>
+                    </div>
+                    <h3>Control Docente & Admin</h3>
+                    <p>Panel de administración en vivo para laboratoristas y docentes. Permite monitorear la ocupación, modificar horarios y gestionar estados de las salas con un solo clic.</p>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">⚡</span>
+                    </div>
+                    <h3>Arquitectura Escalable</h3>
+                    <p>Plataforma web Progresiva desarrollada con backend en Java (Spring Boot), preparada para integrarse con hardware e infraestructura IoT en futuras etapas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN 3: FUNCIONAMIENTO -->
+    <section class="how-it-works-section" id="funcionamiento">
+        <div class="how-it-works-container">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="section-header">
+                <span class="section-badge"> Flujo de Uso</span>
+                <h2>¿Cómo funciona <span>LabFlow QR</span>?</h2>
+                <p>Tres sencillos pasos para asegurar el acceso a tu laboratorio sin filas ni complicaciones.</p>
+            </div>
+            <!-- Pasos del Flujo -->
+            <div class="steps-grid">
+                <!-- Paso 1 -->
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>1. Inicia Sesión</h3>
+                        <p>Autentícate en la plataforma con tus credenciales universitarias. El sistema reconocerá si eres Estudiante, Docente o Administrador.</p>
+                    </div>
+                </div>
+                <!-- Paso 2 -->
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>2. Consulta la Capacidad</h3>
+                        <p>Revisa las tarjetas de laboratorios en tiempo real antes de moverte. Conoce la ocupación exacta y la disponibilidad de cupos.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>3. Escanea y Accede</h3>
+                        <p>Muestra tu carnet con QR dinámico en el lector de la puerta o marca tu entrada directamente desde la web. ¡El aforo se actualizará al instante!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN 4: INVESTIGACIÓN Y SEMILLERO -->
+    <section class="research-section" id="investigacion">
+        <div class="research-container">
+            <div class="research-card">
+                <div class="research-content">
+                    <span class="section-badge">Contexto Académico</span>
+                    <h2>Proyecto de Investigación y Desarrollo</h2>
+                    <p><strong>LabFlow QR</strong> nace como una iniciativa enfocada en la automatización y control de espacios educativos dentro del semillero de investigación en desarrollo de software y mecatrónica.</p>
+                    
+                    <div class="research-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🔬</span>
+                            <div>
+                                <h4>Metodología Ágil</h4>
+                                <p>Desarrollo por fases orientado a la validación constante de prototipos y pruebas de estrés de aforo.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚙️</span>
+                            <div>
+                                <h4>Integración Hardware/Software</h4>
+                                <p>Diseñado para evolucionar de una plataforma Web a una solución IoT integrada con torniquetes y lectores físicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-badge-box">
+                    <div class="badge-circle">
+                        <span class="badge-year">2026</span>
+                        <span class="badge-text">Semillero de Investigación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">LabFlow <span>QR</span></div>
+                <p>Sistema de gestión inteligente de aforo y control de acceso a laboratorios universitarios.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#funcionamiento">Funcionamiento</a>
+                <a href="#investigacion">Investigación</a>
+            </div>
+            <div class="footer-credits">
+                <h4>Desarrollo</h4>
+                <p>Mariana Ávila Julio</p>
+                <p class="sub-credit">Análisis y Desarrollo de Software</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LabFlow QR — Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
